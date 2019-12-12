@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './App.css';
-import Square from './Square'
 
 class App extends Component {
   constructor (){
@@ -19,13 +18,10 @@ class App extends Component {
     })
   }
   render() {
-    let newPic = this.state.picture.map(picture => {
-      return <Square key={picture.hdurl} name={picture.hdurl}/>
-    })
     return (
       <div className="App">
         <h1>Picture of the day</h1>
-        <img src={newPic} alt='pic'>  
+        <img src={this.state.picture.hdurl} alt='pic'>  
         </img>
       </div>
     );
