@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
+import Modal from './Modal'
 
 class App extends Component {
   constructor (){
@@ -21,6 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Picture of the day</h1>
+        <Modal />
         <img src={this.state.picture.hdurl} alt='pic'>  
         </img>
       </div>
