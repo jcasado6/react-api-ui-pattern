@@ -8,10 +8,27 @@ const Div = styled.div`
 
 
 const Modal = props => {
+
+    const divStyle = {
+        display: props.displayModal ? 'block' : 'none'
+    }
+
+    function exitModal(evt){
+        evt.stopPropagation()
+        props.exitModal
+    }
+
     return (
-        <div className='modal'>
-            <div className='modal-content'>
-                <span className='close'>X</span>
+        <div className='modal'
+            onClick={ exitModal }
+            style= { divStyle }>
+
+            <div className='modal-content'
+                onClick={ evt => evt.stopPropagation() }>
+
+                <span className='close'>X
+                onClick={ exitModal }
+                </span>
             </div>
         </div>
     )
