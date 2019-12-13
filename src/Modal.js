@@ -1,21 +1,21 @@
-import React from 'react'
-import Styled from 'styled-components'
+// import React from 'react'
+// import styled from 'styled-components'
 
-// const Square = styled.div`
+// const Div = styled.div`
 //     height: 40vh;
 //     width:40vw;
 //     padding: 25px 50px;`
 
 
-const Modal = props => {
-    return (
-        <div className='modal'>
-            <div className='modal-content'>
-                <span className='close'>X</span>
-            </div>
-        </div>
-    )
-}
+// const Modal = props => {
+//     return (
+//         <div className='modal'>
+//             <div className='modal-content'>
+//                 <span className='close'>X</span>
+//             </div>
+//         </div>
+//     )
+// }
 
-export default Modal
+// export default Modal
 
