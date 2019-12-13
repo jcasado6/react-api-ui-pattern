@@ -1,24 +1,30 @@
-import React from 'react';
-import './Modal.css'
+import React from "react";
+import "./Modal.css";
+import PropTypes from "prop-types";
 
-const Modal = ({ handleClose, show, children }) => {
-    const showHideClassName = show ? 'modal display-block' : 'modal display-none';
-  
+export default class Modal extends React.Component {
+  onClose = e => {
+    this.props.onClose && this.props.onClose(e);
+  };
+  render() {
+    if (!this.props.show) {
+      return null;
+    }
     return (
-      <div className={showHideClassName}>
-        <section className='modal-main'>
-          {children}
-          <button
-            onClick={handleClose}
-          >
-            Close
+      <div class="modal" id="modal">
+        <h2>Modal Window</h2>
+    <h1>{this.props.explanation}</h1>
+        <div class="content">{this.props.children}</div>
+        <div class="actions">
+          <button class="toggle-button" onClick={this.onClose}>
+            close
           </button>
-        </section>
+        </div>
       </div>
     );
-  };
-  
-  
-
-
-  export default Modal
+  }
+}
+Modal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired
+};

@@ -12,16 +12,16 @@ class App extends Component {
       // picture2: picture2,
       pictures: [],
       explanations: [],
-      show: false
+      // show: false
     }
   }
-  showModal = () => {
-    this.setState({ show: true });
-  }
+  // showModal = () => {
+  //   this.setState({ show: true });
+  // }
   
-  hideModal = () => {
-    this.setState({ show: false });
-  }
+  // hideModal = () => {
+  //   this.setState({ show: false });
+  // }
 
   componentDidMount(){
     fetch ('https://api.nasa.gov/planetary/apod?api_key=ArL5YQaUhO73pDtc8SF1f4ZVgMUd2nlvRaOitLHQ&date=2019-04-07&hd=bool')
@@ -31,7 +31,7 @@ class App extends Component {
       // this.setState({picture: res})
       this.setState(prevState => ({ pictures: [...prevState.pictures, res]}))
       this.setState(prevState => ({ explanations: [...prevState.explanations, res]}))
-      // console.log(this.state.picture.hdurl)
+      console.log(this.state.picture)
     })
     fetch ('https://api.nasa.gov/planetary/apod?api_key=ArL5YQaUhO73pDtc8SF1f4ZVgMUd2nlvRaOitLHQ&date=2002-07-14&hd=bool')
     .then(res => res.json())
@@ -109,11 +109,11 @@ class App extends Component {
     })
     return (
       <div className="App">
-        <Modal show={this.state.show} handleClose={this.hideModal} >
+        {/* <Modal show={this.state.show} handleClose={this.hideModal} >
           <p>Modal</p>
           <p>Data</p>
-        </Modal>
-        <button type='button' onClick={this.showModal}>Open</button>
+        </Modal> */}
+        {/* <button type='button' onClick={this.showModal}>Open</button> */}
         <h1>Picture of the day</h1>
         {/* <img src={this.state.pictures[1].hdurl} alt='pic'></img> */}
         {/* <img src={this.state.picture2.hdurl} alt='pic'></img> */}
