@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Modal from './Modal';
 import './App.css';
-
+import Header from './Header'
 
 
 
@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch ('https://api.nasa.gov/planetary/apod?api_key=ArL5YQaUhO73pDtc8SF1f4ZVgMUd2nlvRaOitLHQ&date=2019-04-07&hd=bool')
+    fetch ('https://api.nasa.gov/planetary/apod?api_key=ArL5YQaUhO73pDtc8SF1f4ZVgMUd2nlvRaOitLHQ&date=2014-12-13&hd=bool')
     .then(res => res.json())
     .then(res => {
       this.setState({picture: res.url})
@@ -84,6 +84,9 @@ class App extends Component {
   
   render() {
     return (
+      <div>
+        <Header/>
+      
       <div className="App">
           <p onClick={ () => this.selectModal('Modal A') }>
           <img className= 'picture' src={this.state.picture} alt='pic'></img>
@@ -117,18 +120,19 @@ class App extends Component {
           <img className= 'picture' src={this.state.picture8} alt='pic'></img>
           </p>
 
-          <p onClick={ () => this.selectModal('Modal I') }>
+          {/* <p onClick={ () => this.selectModal('Modal I') }>
           <img className= 'picture' src={this.state.picture5} alt='pic'></img>
           </p>
 
           <p onClick={ () => this.selectModal('Modal J') }>
           <img className= 'picture' src={this.state.picture5} alt='pic'></img>
-          </p>
+          </p> */}
 
           <Modal 
             displayModal={this.state.modal}
             modalInfo={this.state.modalInfo}
             closeModal={this.selectModal}/>
+      </div>
       </div>
     );
   }
