@@ -28,7 +28,7 @@ class App extends Component {
     .then(res => {
       this.setState({picture: res.url})
       this.setState({explanation: res.title})
-      console.log(res.explanation)
+      console.log(res)
       // this.setState(prevState => ({ pictures: [...prevState.pictures, res]}))
       // this.setState(prevState => ({ explanations: [...prevState.explanations, res]}))
      
@@ -122,14 +122,6 @@ class App extends Component {
           <p onClick={ () => this.selectModal('Modal H') }>
           <img className= 'picture' src={this.state.picture8} alt='pic'></img>
           </p>
-
-          {/* <p onClick={ () => this.selectModal('Modal I') }>
-          <img className= 'picture' src={this.state.picture5} alt='pic'></img>
-          </p>
-
-          <p onClick={ () => this.selectModal('Modal J') }>
-          <img className= 'picture' src={this.state.picture5} alt='pic'></img>
-          </p> */}
 
           <Modal 
             displayModal={this.state.modal}
