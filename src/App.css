@@ -7,6 +7,7 @@
     color: black;
     flex-flow: wrap;
     padding-top: 40px;
+    background-image: url('/Users/Jose/sei/projects/react-api-ui-pattern/src/nasa--hI5dX2ObAs-unsplash.jpg');
   }
   
 h2 {
@@ -31,7 +32,7 @@ h2 {
   
   /* Modal content */
   .modal-content {
-    background-color: white;
+    background-color: rgb(226, 220, 132);
     width: 70%; /* Width in proportion to its parent container*/
     max-width: 640px; /* Max width where it stops expanding */
     height: 70%; /* Height in proportion to its parent container */
@@ -39,6 +40,7 @@ h2 {
     padding: 10px;
     border: 1px solid black;
     border-radius: 20px; /* Optional. Rounds container corners */
+    text-align: center;
   }
   
   .modal-flex {
@@ -49,10 +51,9 @@ h2 {
     align-items: center;
   }
   
-  .modal-info {
-    background-color: #888;
+  /* .modal-info {
     border: 1px solid #888;
-  }
+  } */
   
   /* Close button */
   .close {

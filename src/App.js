@@ -10,14 +10,14 @@ class App extends Component {
   state = {
     modal: false,
     modalInfo: "",
+    picture: [],
+    explanation: []
   }
 
   selectModal = (info = "") => {
     this.setState({
       modal: !this.state.modal,
       modalInfo: info,
-      picture: [],
-      explanation: []
     })
   }
 
@@ -26,6 +26,8 @@ class App extends Component {
     .then(res => res.json())
     .then(res => {
       this.setState({picture: res.url})
+      this.setState({explanation: res.title})
+      console.log(res.explanation)
       // this.setState(prevState => ({ pictures: [...prevState.pictures, res]}))
       // this.setState(prevState => ({ explanations: [...prevState.explanations, res]}))
      
