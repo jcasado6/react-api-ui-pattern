@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Modal from './Modal';
 import './App.css';
 import Header from './Header'
+import nasa from './Backround.jpg'
 
 
 
@@ -89,7 +90,7 @@ class App extends Component {
       <div>
         <Header/>
       
-      <div className="App">
+      <div className="App" styles= {{ backgroundImage: 'url(${nasa})' }}>
           <p onClick={ () => this.selectModal('Modal A') }>
           <img className= 'picture' src={this.state.picture} alt='pic'></img>
           </p>

@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components'
 
 const Nav = styled.nav`
-    background-color: black;
+    background-color: rgb(226, 220, 132);
     font-size: 15px;
-    color: white;
+    color: black;
     height: 10vh;
     `
 
