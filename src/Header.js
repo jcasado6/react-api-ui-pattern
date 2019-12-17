@@ -8,7 +8,7 @@ const Nav = styled.nav`
     height: 10vh;
     `
 
-function Header () {
+function Header (props) {
         return (
             <Nav>
               <h2>NASA API: Astronomy Picture of the Day</h2>

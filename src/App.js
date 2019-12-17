@@ -27,7 +27,7 @@ class App extends Component {
     .then(res => res.json())
     .then(res => {
       this.setState({picture: res.url})
-      this.setState({explanation: res.title})
+      this.setState({explanation: res.explanation})
       console.log(res)
       // this.setState(prevState => ({ pictures: [...prevState.pictures, res]}))
       // this.setState(prevState => ({ explanations: [...prevState.explanations, res]}))
