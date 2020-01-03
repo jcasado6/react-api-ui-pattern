@@ -19,8 +19,8 @@ h2 {
   
   /* Background effect. It covers the entire site */
   .modal {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Overlay effect: translucent background: black w/ partial opacity */
+    /* background-color: rgb(92, 117, 0); Fallback color */
+    /* background-color: rgba(182, 135, 35, 0.4); Overlay effect: translucent background: black w/ partial opacity */
     z-index: 1; /* Overlay effect: positioned over other containers */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
@@ -39,9 +39,10 @@ h2 {
     height: 70%; /* Height in proportion to its parent container */
     margin: auto; 
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 20px; 
     text-align: center;
+    color: black;
   }
   
   .modal-flex {
@@ -63,7 +64,7 @@ h2 {
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: white;
     text-decoration: none;
     cursor: pointer;
   }
