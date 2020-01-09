@@ -19,8 +19,8 @@ h2 {
   
   /* Background effect. It covers the entire site */
   .modal {
-    /* background-color: rgb(92, 117, 0); Fallback color */
-    /* background-color: rgba(182, 135, 35, 0.4); Overlay effect: translucent background: black w/ partial opacity */
+    /* background-color: rgb(92, 117, 0); /* Fallback color */
+    /* background-color: rgba(129, 102, 42, 0.4); Overlay effect: translucent background: black w/ partial opacity */ 
     z-index: 1; /* Overlay effect: positioned over other containers */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
@@ -74,7 +74,7 @@ h2 {
     width: 20vw;
     display: flex;
     /* justify-content: space-between; */
-    border:rgb(226, 220, 132) 1px solid;
+    border:rgb(226, 220, 132) 4px solid;
     border-radius: 5px;
     padding: 5px;
     background-color: black;
